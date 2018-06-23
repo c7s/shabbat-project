@@ -1,0 +1,15 @@
+{
+  "scripts": {
+    "build-all-dev": "concurrently --kill-others \"yarn build-project-dev\" \"yarn build-feature-dev\" \"yarn build-version-dev\" \"yarn build-note-dev\" \"yarn build-file-dev\"",
+    "build-project-dev": "./project/node_modules/.bin/tsc --watch",
+    "build-feature-dev": "./feature/node_modules/.bin/tsc --watch",
+    "build-version-dev": "./version/node_modules/.bin/tsc --watch",
+    "build-note-dev": "./note/node_modules/.bin/tsc --watch",
+    "build-file-dev": "./file/node_modules/.bin/tsc --watch",
+
+    "start-all-dev": "bin/environment node_modules/.bin/nodemon dist/app.js"
+  },
+  "dependencies": {
+    "concurrently": "^3.6.0"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "main": {
+    "type": "file",
+    "filename": "runtime/uno_file-app.log",
+    "level": "debug"
+  },
+  "access": {
+    "type": "file",
+    "filename": "runtime/uno_file-access.log",
+    "level": "debug"
+  }
+}
