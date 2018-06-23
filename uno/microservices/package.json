@@ -1,15 +1,19 @@
 {
   "scripts": {
-    "build-all-dev": "concurrently --kill-others \"yarn build-project-dev\" \"yarn build-feature-dev\" \"yarn build-version-dev\" \"yarn build-note-dev\" \"yarn build-file-dev\"",
-    "build-project-dev": "./project/node_modules/.bin/tsc --watch",
-    "build-feature-dev": "./feature/node_modules/.bin/tsc --watch",
-    "build-version-dev": "./version/node_modules/.bin/tsc --watch",
-    "build-note-dev": "./note/node_modules/.bin/tsc --watch",
-    "build-file-dev": "./file/node_modules/.bin/tsc --watch",
-
-    "start-all-dev": "bin/environment node_modules/.bin/nodemon dist/app.js"
+    "build-all-dev": "npm-run-parallel build-project-dev build-feature-dev build-version-dev build-note-dev build-file-dev",
+    "build-project-dev": "./project/node_modules/.bin/tsc -p \"./project\" --watch",
+    "build-feature-dev": "./feature/node_modules/.bin/tsc -p \"./feature\" --watch",
+    "build-version-dev": "./version/node_modules/.bin/tsc -p \"./version\" --watch",
+    "build-note-dev": "./note/node_modules/.bin/tsc -p \"./note\" --watch",
+    "build-file-dev": "./file/node_modules/.bin/tsc -p \"./file\" --watch",
+    "start-all-dev": "npm-run-parallel start-project-dev start-feature-dev start-version-dev start-note-dev start-file-dev",
+    "start-project-dev": "./project/bin/environment ./project/node_modules/.bin/nodemon ./project/dist/app.js",
+    "start-feature-dev": "./feature/bin/environment ./feature/node_modules/.bin/nodemon ./feature/dist/app.js",
+    "start-version-dev": "./version/bin/environment ./version/node_modules/.bin/nodemon ./version/dist/app.js",
+    "start-note-dev": "./note/bin/environment ./note/node_modules/.bin/nodemon ./note/dist/app.js",
+    "start-file-dev": "./file/bin/environment ./file/node_modules/.bin/nodemon ./file/dist/app.js"
   },
   "dependencies": {
-    "concurrently": "^3.6.0"
+    "npm-run-parallel": "^0.6.0"
   }
 }
