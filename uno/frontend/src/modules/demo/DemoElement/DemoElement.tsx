@@ -1,6 +1,6 @@
-import * as React from 'react';
+import * as React from "react";
 
-import '../DemoPage/DemoPage.css';
+import "../DemoPage/DemoPage.css";
 
 interface IDemoElementProps {
     title: string;
@@ -8,15 +8,10 @@ interface IDemoElementProps {
 }
 
 export function DemoElement({ title, component }: IDemoElementProps): JSX.Element {
-
     return (
-        <div className='component'>
-            <h3 className='title'>
-                {title}
-            </h3>
-            <div className='content'>
-                {component}
-            </div>
+        <div className="component">
+            <h3 className="title">{title}</h3>
+            <div className="content">{component}</div>
         </div>
-    )
+    );
 }
