@@ -4,6 +4,7 @@ import { Layout, Panel } from 'react-toolbox/lib/layout';
 import { ProjectCard } from '../../project/ProjectListPage/ProjectCard';
 import * as styles from './DemoPage.css';
 
+import { Note } from '../../note';
 import { DemoElement } from '../DemoElement';
 
 export class DemoPage extends React.Component {
@@ -18,6 +19,15 @@ export class DemoPage extends React.Component {
             </DemoElement>
             <DemoElement title="Project card">
               <ProjectCard />
+            </DemoElement>
+            <DemoElement title="Заметка">
+              <Note
+                editNote={false}
+                cardMedia={true}
+                creationTime={new Date()}
+                text={'Текст'}
+                file={'https://placeimg.com/800/450/nature'}
+              />
             </DemoElement>
           </Panel>
         </Layout>
