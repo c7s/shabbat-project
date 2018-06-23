@@ -7,16 +7,14 @@ import { DemoElement } from '../DemoElement';
 
 export class DemoPage extends React.Component {
   public render() {
-    const button = (
-      <Button className={'createProject'} label="Create project" primary={true} raised={true} />
-    );
-
     return (
       <div className={styles.root}>
         <Layout>
           <Panel>
-            <DemoElement title={'Название компонента'} component={'Место для компонента'} />
-            <DemoElement title={'Кнопка'} component={button} />
+            <DemoElement title="Название компонента">Место для компонента</DemoElement>
+            <DemoElement title="Кнопка">
+              <Button label="Create project" primary={true} raised={true} />
+            </DemoElement>
           </Panel>
         </Layout>
       </div>

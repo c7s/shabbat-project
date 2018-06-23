@@ -4,14 +4,14 @@ import * as styles from '../DemoPage/DemoPage.css';
 
 interface IDemoElementProps {
   title: string;
-  component: JSX.Element | string;
+  children: React.ReactChild;
 }
 
-export function DemoElement({ title, component }: IDemoElementProps): JSX.Element {
+export function DemoElement({ title, children }: IDemoElementProps): JSX.Element {
   return (
     <div className={styles.component}>
       <h3 className={styles.title}>{title}</h3>
-      <div className={styles.content}>{component}</div>
+      <div className={styles.content}>{children}</div>
     </div>
   );
 }
