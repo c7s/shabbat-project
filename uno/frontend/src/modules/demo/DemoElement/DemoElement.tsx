@@ -1,17 +1,17 @@
-import * as React from "react";
+import * as React from 'react';
 
-import "../DemoPage/DemoPage.css";
+import * as styles from '../DemoPage/DemoPage.css';
 
 interface IDemoElementProps {
-    title: string;
-    component: JSX.Element | string;
+  title: string;
+  component: JSX.Element | string;
 }
 
 export function DemoElement({ title, component }: IDemoElementProps): JSX.Element {
-    return (
-        <div className="component">
-            <h3 className="title">{title}</h3>
-            <div className="content">{component}</div>
-        </div>
-    );
+  return (
+    <div className={styles.component}>
+      <h3 className={styles.title}>{title}</h3>
+      <div className={styles.content}>{component}</div>
+    </div>
+  );
 }
