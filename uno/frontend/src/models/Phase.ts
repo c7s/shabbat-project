@@ -2,7 +2,7 @@ import { observable } from 'mobx';
 
 import { Note } from './Note';
 
-enum Type {
+export enum Type {
   Wants = 'wants',
   Hypothesis = 'hypothesis',
   Mockups = 'mockups',

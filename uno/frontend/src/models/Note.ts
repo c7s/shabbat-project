@@ -10,7 +10,12 @@ export class Note {
   @observable public fileType: string;
   @observable public creationTime: Date;
 
-  constructor({ id = uniqid(), text = '', files = [], creationTime = new Date() }: Partial<Note>) {
+  constructor({
+    id = uniqid(),
+    text = '',
+    files = [],
+    creationTime = new Date(),
+  }: Partial<Note> = {}) {
     this.id = id;
     this.text = text;
     this.files = files;

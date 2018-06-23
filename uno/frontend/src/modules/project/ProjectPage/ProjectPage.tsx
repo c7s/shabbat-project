@@ -1,14 +1,18 @@
 import * as React from 'react';
-import { Button } from 'react-toolbox/lib/button';
+import { observer } from 'mobx-react';
 
-export class ProjectPage extends React.Component {
+import { Project as ProjectModel } from '../../../models';
+
+interface IProjectPageProps {
+  project?: ProjectModel;
+}
+
+@observer
+export class ProjectPage extends React.Component<IProjectPageProps> {
   public render() {
-    return (
-      <div className="root">
-        <div className="menu">
-          <Button className={'createProject'} label="Create project" primary={true} raised={true} />
-        </div>
-      </div>
-    );
+    if (!this.props.project) {
+      throw new Error();
+    }
+    return <div>project name: {this.props.project.name}</div>;
   }
 }

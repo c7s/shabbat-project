@@ -9,7 +9,7 @@ export interface IProjectListParams {
 export class ProjectList {
   @observable public projects: Project[];
 
-  constructor({ projects = [] }: IProjectListParams = {}) {
+  constructor({ projects = [] }: Partial<ProjectList> = {}) {
     this.projects = projects;
   }
 }
