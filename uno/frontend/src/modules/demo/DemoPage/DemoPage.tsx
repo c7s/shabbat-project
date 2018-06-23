@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-export class Demo extends React.Component {
+export class DemoPage extends React.Component {
 
     public render() {
         return <div>Hello</div>

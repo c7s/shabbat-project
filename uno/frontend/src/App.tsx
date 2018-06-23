@@ -1,8 +1,8 @@
 import * as React from 'react';
 import './App.css';
 
-import { BrowserRouter, Link, Route } from 'react-router-dom';
-import { Demo } from './modules/demo/DemoPage/DemoPage';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { DemoPage } from './modules/demo/DemoPage/DemoPage';
 import { ProjectPage } from './modules/project/ProjectPage';
 
 class App extends React.Component {
@@ -10,8 +10,10 @@ class App extends React.Component {
     return (
       <BrowserRouter>
         <div className="App">
-          <Route path='/' component={ProjectPage} />
-          <Route path='/demo' component={Demo} />
+          <Switch>
+            <Route exact={true} path='/' component={ProjectPage} />
+            <Route path='/demo' component={DemoPage} />
+          </Switch>
         </div>
       </BrowserRouter>
     );
