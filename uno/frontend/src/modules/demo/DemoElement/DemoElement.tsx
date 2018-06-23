@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import * as styles from '../DemoPage/DemoPage.css';
+import * as styles from './DemoElement.css';
 
 interface IDemoElementProps {
   title: string;

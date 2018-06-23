@@ -4,7 +4,7 @@ import autobindDecorator from 'autobind-decorator';
 
 import './App.css';
 
-import { Route, Switch } from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { DemoPage } from './modules/demo/DemoPage';
 import { ProjectPage } from './modules/project/ProjectPage';
 import { Store as StoreModel } from './models';
@@ -12,17 +12,20 @@ import { Store as StoreModel } from './models';
 interface IAppProps {
   store?: StoreModel;
 }
+import { ProjectListPage } from './modules/project/ProjectListPage';
 
 @observer
 export class App extends React.Component<IAppProps> {
   public render() {
     return (
-      <div className="App">
-        <Switch>
-          <Route exact={true} path="/" render={this.renderProjectPage} />
-          <Route path="/demo" component={DemoPage} />
-        </Switch>
-      </div>
+      <BrowserRouter>
+        <div className="App">
+          <Switch>
+            <Route exact={true} path="/" component={ProjectListPage} />
+            <Route path="/demo" component={DemoPage} />
+          </Switch>
+        </div>
+      </BrowserRouter>
     );
   }
 
