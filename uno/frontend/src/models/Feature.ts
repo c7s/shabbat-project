@@ -1,7 +1,7 @@
-import { observable } from "mobx";
-import * as uniqid from "uniqid";
+import { observable } from 'mobx';
+import * as uniqid from 'uniqid';
 
-import { Version } from "./Version";
+import { Version } from './Version';
 
 export class Feature {
   @observable public id: string;
@@ -11,9 +11,9 @@ export class Feature {
 
   constructor({
     id = uniqid(),
-    name = "",
+    name = '',
     versions = [],
-    creationTime = new Date()
+    creationTime = new Date(),
   }: Partial<Feature> = {}) {
     this.id = id;
     this.name = name;

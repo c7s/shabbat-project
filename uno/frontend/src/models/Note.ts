@@ -1,7 +1,7 @@
-import { observable } from "mobx";
-import * as uniqid from "uniqid";
+import { observable } from 'mobx';
+import * as uniqid from 'uniqid';
 
-import { File } from "./File";
+import { File } from './File';
 
 export class Note {
   @observable public id: string;
@@ -10,12 +10,7 @@ export class Note {
   @observable public fileType: string;
   @observable public creationTime: Date;
 
-  constructor({
-    id = uniqid(),
-    text = "",
-    files = [],
-    creationTime = new Date()
-  }: Partial<Note>) {
+  constructor({ id = uniqid(), text = '', files = [], creationTime = new Date() }: Partial<Note>) {
     this.id = id;
     this.text = text;
     this.files = files;

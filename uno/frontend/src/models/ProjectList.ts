@@ -1,6 +1,6 @@
-import { observable } from "mobx";
+import { observable } from 'mobx';
 
-import { Project } from "./Project";
+import { Project } from './Project';
 
 export interface IProjectListParams {
   projects?: Project[];
