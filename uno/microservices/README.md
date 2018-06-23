@@ -1,4 +1,10 @@
-# Replace Me
+## Services
+
+* project: http://0.0.0.0:49101
+* feature: http://0.0.0.0:49102
+* version: http://0.0.0.0:49103
+* note: http://0.0.0.0:49104
+* file: http://0.0.0.0:49105
 
 ## Requirements
 

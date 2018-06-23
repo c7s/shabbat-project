@@ -7,7 +7,7 @@
     "build-note-dev": "./note/node_modules/.bin/tsc -p \"./note\" --watch",
     "build-file-dev": "./file/node_modules/.bin/tsc -p \"./file\" --watch",
     "start-all-dev": "npm-run-parallel start-project-dev start-feature-dev start-version-dev start-note-dev start-file-dev",
-    "start-project-dev": "./project/bin/environment ./project/node_modules/.bin/nodemon ./project/dist/app.js",
+    "start-project-dev": "cd project && bin/environment node_modules/.bin/nodemon dist/app.js",
     "start-feature-dev": "./feature/bin/environment ./feature/node_modules/.bin/nodemon ./feature/dist/app.js",
     "start-version-dev": "./version/bin/environment ./version/node_modules/.bin/nodemon ./version/dist/app.js",
     "start-note-dev": "./note/bin/environment ./note/node_modules/.bin/nodemon ./note/dist/app.js",
