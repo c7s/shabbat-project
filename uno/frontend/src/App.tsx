@@ -2,10 +2,10 @@ import * as React from 'react';
 import './App.css';
 
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import { DemoPage } from './modules/demo/DemoPage/DemoPage';
+import { DemoPage } from './modules/demo/DemoPage';
 import { ProjectPage } from './modules/project/ProjectPage';
 
-class App extends React.Component {
+export class App extends React.Component {
   public render() {
     return (
       <BrowserRouter>
@@ -19,5 +19,3 @@ class App extends React.Component {
     );
   }
 }
-
-export default App;

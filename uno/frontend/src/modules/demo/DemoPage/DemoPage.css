@@ -1,0 +1,17 @@
+.root {
+    display: flex;
+    align-content: flex-start;
+}
+
+.component {
+    margin-top: 20px;
+}
+
+.title {
+    color: green;
+    margin-top: 10px;
+}
+
+.content {
+    padding: 0 10px;;
+}
